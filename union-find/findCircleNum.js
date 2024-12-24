@@ -8,8 +8,8 @@ var findCircleNum = function(isConnected) {
   const rank = Array(n).fill(1);
 
   function union(x, y) {
-    const rootX = root[x];
-    const rootY = root[y];
+    const rootX = find(x);
+    const rootY = find(y);
 
     if (rank[rootX] > rank[rootY]) {
       root[rootY] = rootX;
